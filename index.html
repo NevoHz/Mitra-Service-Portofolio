@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="dist/css/output.css" rel="stylesheet" />
+    <title>MITRA SERVICE</title>
+    <style>
+      /* Navbar tetap di atas */
+      header {
+        background-color: white;
+        transition: background-color 0.3s ease-in-out,
+          box-shadow 0.3s ease-in-out;
+      }
+      /* Gaya untuk mobile menu */
+      #mobile-menu {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.9); /* Tidak transparan */
+        z-index: 50;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      #mobile-menu.show {
+        display: flex;
+      }
+      #hamburger,
+      #close-menu {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-r from-blue-500 to-purple-600">
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 shadow-md">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between py-4">
+          <!-- Logo -->
+          <a href="#" class="font-bold text-lg text-black"> MITRA SERVICE </a>
+          <!-- Nav Links (Desktop) -->
+          <nav class="hidden lg:flex space-x-8">
+            <a href="#home" class="text-base text-black hover:text-gray-500"
+              >Beranda</a
+            >
+            <a href="#about" class="text-base text-black hover:text-gray-500"
+              >Tentang Saya</a
+            >
+            <a href="#gallery" class="text-base text-black hover:text-gray-500"
+              >Gallery</a
+            >
+            <a href="#map" class="text-base text-black hover:text-gray-500"
+              >Map</a
+            >
+          </nav>
+          <!-- Hamburger Menu (Mobile) -->
+          <button
+            id="hamburger"
+            class="block lg:hidden text-black text-2xl focus:outline-none"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 z-40 flex flex-col items-center justify-center"
+    >
+      <button
+        id="close-menu"
+        class="absolute top-4 right-4 text-white text-3xl focus:outline-none"
+      >
+        ✕
+      </button>
+      <a href="#home" class="text-white text-lg mb-4">Beranda</a>
+      <a href="#about" class="text-white text-lg mb-4">Tentang Saya</a>
+      <a href="#gallery" class="text-white text-lg mb-4">Gallery</a>
+      <a href="#blog" class="text-white text-lg mb-4">Blog</a>
+      <a href="#contact" class="text-white text-lg">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="container mx-auto px-4 min-h-screen flex flex-col-reverse lg:flex-row items-center justify-center lg:space-x-10 bg-cover bg-center"
+      style="background-image: url('dist/img/rumah.jpeg')"
+    >
+      <!-- Left Content -->
+      <div
+        class="lg:w-1/2 text-center lg:text-left bg-black bg-opacity-20 p-6 rounded-lg"
+      >
+        <h1
+          class="text-4xl lg:text-6xl font-bold text-white flex items-center justify-center"
+        >
+          MITRA <span class="text-blue-700">SERVICE</span>
+        </h1>
+        <p
+          class="mt-4 text-slate-300 lg:text-3xl flex items-center justify-center"
+        >
+          Siap memperbaiki segala kerusakan elektronik anda
+        </p>
+        <!-- <button
+          class="mt-6 px-6 py-3 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600"
+        >
+          See My Work
+        </button> -->
+      </div>
+    </section>
+    <!-- Hero Section Ends -->
+
+    <!-- Hero Section Ends -->
+
+    <!-- About Section Start -->
+    <section id="about" class="bg-white pt-36 pb-32">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-8">About Me</h2>
+        <div class="flex flex-col items-center justify-center">
+          <!-- Teks Deskripsi -->
+          <p class="text-gray-600 text-lg mb-6 leading-relaxed max-w-2xl">
+            Ahli Service Elektronik Siap Membantu! Saya melayani perbaikan
+            berbagai perangkat seperti
+            <span class="text-blue-600 font-semibold">TV</span>,
+            <span class="text-blue-600 font-semibold">radio</span>,
+            <span class="text-blue-600 font-semibold">kipas angin</span>,
+            <span class="text-blue-600 font-semibold">setrika</span>, hingga
+            <span class="text-blue-600 font-semibold">Magicom</span>. Dengan
+            pengalaman dan perhatian pada detail, saya pastikan layanan yang
+            cepat, jujur, dan hasil memuaskan. Hubungi saya untuk memulihkan
+            perangkat elektronik Anda!
+          </p>
+
+          <!-- Tombol WhatsApp -->
+          <a
+            href="https://wa.me/6281231119925"
+            class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 inline-flex items-center"
+          >
+            <img
+              src="dist/wa/wa.png"
+              alt="WhatsApp Icon"
+              class="w-6 h-6 mr-2"
+            />
+            Hubungi Saya di WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- About Section Ends -->
+
+    <!-- Gallery Section Start -->
+    <section
+      id="gallery"
+      class="py-16 px-4 bg-gradient-to-br from-gray-50 to-gray-100"
+    >
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-10">
+          Gallery
+        </h2>
+        <!-- Responsive Layout -->
+        <div
+          class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-[4px]"
+        >
+          <!-- Item 1 -->
+          <div class="relative group overflow-hidden">
+            <div
+              class="w-full aspect-square border-4 border-gray-300 rounded-l-lg rounded-r-lg group-hover:border-8 group-hover:border-gray-500 transition-all duration-300"
+            >
+              <div
+                class="w-full h-full bg-cover bg-top group-hover:scale-110 transition-transform duration-300"
+                style="background-image: url('dist/img/1.jpeg')"
+              ></div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="relative group overflow-hidden">
+            <div
+              class="w-full aspect-square border-4 border-gray-300 rounded-l-lg rounded-r-lg group-hover:border-8 group-hover:border-gray-500 transition-all duration-300"
+            >
+              <div
+                class="w-full h-full bg-cover bg-top group-hover:scale-110 transition-transform duration-300"
+                style="background-image: url('dist/img/2.jpeg')"
+              ></div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="relative group overflow-hidden">
+            <div
+              class="w-full aspect-square border-4 border-gray-300 rounded-l-lg rounded-r-lg group-hover:border-8 group-hover:border-gray-500 transition-all duration-300"
+            >
+              <div
+                class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-300"
+                style="background-image: url('dist/img/3.jpeg')"
+              ></div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="relative group overflow-hidden">
+            <div
+              class="w-full aspect-square border-4 border-gray-300 rounded-l-lg rounded-r-lg group-hover:border-8 group-hover:border-gray-500 transition-all duration-300"
+            >
+              <div
+                class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-300"
+                style="background-image: url('dist/img/4.jpeg')"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Map Start -->
+    <section id="map" class="py-16">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-4xl font-extrabold text-white mb-4">Find Us</h2>
+        <p class="text-gray-200 mb-8">
+          Check out our exact location below and plan your visit easily!
+        </p>
+        <div
+          class="rounded-xl overflow-hidden shadow-lg border border-gray-300 bg-white"
+        >
+          <iframe
+            class="w-full h-[400px] sm:h-[500px]"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d415.470006196774!2d111.996402897171!3d-7.827967941961368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7856fc30e42fb5%3A0xedd6cfd4dbf6374e!2sMitra%20Service%20Elektro%208!5e0!3m2!1sen!2sid!4v1725971509018!5m2!1sen!2sid"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- Map Section Ends -->
+
+    <!-- Footer Start -->
+    <footer class="bg-black text-white py-8">
+      <div class="container mx-auto px-4 text-center">
+        <h3 class="text-lg font-bold mb-4">MITRA SERVICE</h3>
+        <p class="text-sm text-gray-400 mb-4">
+          © 2024 Yodhi Pratama Iswoyo. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script>
+      // Toggle Mobile Menu
+      const hamburger = document.getElementById("hamburger");
+      const closeMenu = document.getElementById("close-menu");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      hamburger.addEventListener("click", () => {
+        mobileMenu.classList.add("show");
+      });
+
+      closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.remove("show");
+      });
+    </script>
+  </body>
+</html>
